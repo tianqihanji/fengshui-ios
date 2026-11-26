@@ -332,7 +332,7 @@ enum CompassData {
           count: 36, labels: (0..<36).map { String($0 * 10) }, mode: .radial, weight: 0.30))
 
         list.append(ring("tick", "周天刻度", "一周天三百六十细格，每格一度，用于精确定位与读盘。",
-          count: 360, labels: [], tickOnly: true, weight: 0.22))
+          count: 360, labels: [], weight: 0.22, tickOnly: true))
 
         // 着色与字体：传统色谱轮转 + 同色系以明度分层
         for i in list.indices {

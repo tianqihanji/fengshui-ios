@@ -64,7 +64,7 @@ struct PlateCanvas: View {
             let tfont = Font.custom("SongtiSC-Bold", size: rTC * 0.20)
             for (txt, pt) in [("子", CGPoint(x: cx, y: cy - tf)), ("午", CGPoint(x: cx, y: cy + tf)),
                               ("卯", CGPoint(x: cx - tf, y: cy)), ("酉", CGPoint(x: cx + tf, y: cy))] {
-                ctx.draw(Text(txt).font(tfont).foregroundStyle(tc),
+                ctx.draw(Text(txt).font(tfont).foregroundColor(tc),
                          at: pt, anchor: .center)
             }
 
@@ -202,11 +202,11 @@ struct PlateCanvas: View {
         c.translateBy(x: cx, y: cy)
         if radial {
             c.rotate(by: .degrees(angle - 90))
-            c.draw(Text(text).font(font).foregroundStyle(color),
+            c.draw(Text(text).font(font).foregroundColor(color),
                    at: CGPoint(x: rMid, y: 0), anchor: .center)
         } else {
             c.rotate(by: .degrees(angle))
-            c.draw(Text(text).font(font).foregroundStyle(color),
+            c.draw(Text(text).font(font).foregroundColor(color),
                    at: CGPoint(x: 0, y: -rMid), anchor: .center)
         }
     }
